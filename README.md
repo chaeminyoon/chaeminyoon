@@ -40,6 +40,7 @@ I specialize in applying Deep Learning and Large Language Models to solve comple
 ### Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&theme=radical" alt="Top Languages" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&layout=compact&theme=radical&card_width=400" alt="Top Languages" />
+
 </div>
 
