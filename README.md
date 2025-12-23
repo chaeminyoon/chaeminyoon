@@ -1,17 +1,17 @@
 # Hi there, I'm Chaemin Yoon 👋
 
-### 🚀 AI Researcher & Developer | Maritime Traffic Analysis | RAG Systems
+### AI Researcher & Developer | Maritime Traffic Analysis | RAG Systems
 
 I specialize in applying Deep Learning and Large Language Models to solve complex problems in maritime safety and information retrieval. My work bridges the gap between academic research and practical, explainable AI applications.
 
 ---
 
-### 🔭 Current Focus
+### Current Focus
 
 - **Maritime Traffic Risk Assessment**: Developing deep learning models (CNN, LSTM) to analyze maritime traffic patterns, implementing ROC analysis and Attention Maps for risk prediction.
 - **Advanced RAG Systems**: Building production-ready Retrieval-Augmented Generation pipelines using Vector Databases (ChromaDB, Neo4j) and LLMs (Ollama, GPT-4).
 
-### 🛠️ Tech Stack
+### Tech Stack
 
 <div align="center">
 	<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -22,15 +22,14 @@ I specialize in applying Deep Learning and Large Language Models to solve comple
 	<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
 </div>
 
-### 📂 Featured Projects
+### Featured Projects
 
-#### 🚢 **MaritimeTrafficProject**
+#### **MaritimeTrafficProject**
 *Research focused on maritime traffic risk analysis.*
 - Implemented **ROC analysis** and **Attention Map** visualizations to interpret model predictions.
 - Developed robust data pipelines for handling spatial data (Shapefiles) and raw traffic logs.
-- Outcome: SCI Manuscript with detailed methodology and result analysis.
 
-#### 🧠 **RAG & VectorDB Pipelines**
+#### **RAG & VectorDB Pipelines**
 *End-to-end information retrieval systems.*
 - **gysy_vectordb_cli**: A CLI pipeline to catalog, process, and index PDF documents into ChromaDB.
 - **Openary RAG**: Investigating GraphRAG with Neo4j to handle ambiguous queries and improve retrieval context.
@@ -38,9 +37,9 @@ I specialize in applying Deep Learning and Large Language Models to solve comple
 
 ---
 
-### 📈 Stats
+### Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&layout=compact&theme=radical" alt="Top Languages" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&theme=radical" alt="Top Languages" height="150"/>
 </div>
 
