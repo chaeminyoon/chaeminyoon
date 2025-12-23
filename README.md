@@ -1,92 +1,99 @@
+<div align="center">
+
 # Hi there, I'm Chaemin Yoon 👋
 
-### **AI Researcher & Engineer** | Maritime Safety AI & Production RAG Systems
+### **AI Researcher & Engineer**
+*Maritime Safety AI & Production RAG Systems*
 
-> **"I turn research prototypes into reliable, interpretable, production-ready systems."**
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&duration=3000&pause=1000&color=3776AB&center=true&vCenter=true&width=600&lines=I+turn+research+prototypes+into+production+systems.;Explainable+Deep+Learning+for+Maritime+Safety;Hybrid+RAG+Architecture+(Vector+%2B+Graph)" alt="Typing SVG" /></a>
 
-I bridge the gap between academic research and practical software engineering. My expertise lies in building **Explainable Deep Learning models** for maritime safety and architecting **Hybrid RAG systems** (Vector + Graph) for enterprise document intelligence.
+<br/>
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white" />
+<img src="https://img.shields.io/badge/ChromaDB-111111?style=flat-square&logo=databricks&logoColor=white" />
+<img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+
+</div>
+
+<br/>
+
+<table>
+<tr>
+<td width="60%" valign="top">
+
+## 🔭 Current Focus
+
+### 🌊 Maritime Traffic Risk Modeling
+> *Architecting deep learning systems for proactive maritime safety.*
+- **Core Tech:** ConvLSTM-Attention for spatio-temporal patterns.
+- **XAI:** Attention Maps & ROC/AUC tuning for decision support.
+- **Engineering:** Deterministic grid-based geospatial pipelines.
+
+### 🧠 Advanced RAG Systems
+> *Robust retrieval for ambiguous queries & noisy docs.*
+- **Architecture:** Hybrid (VectorDB + Neo4j Knowledge Graph).
+- **Stack:** Local LLMs (Ollama), metadata extraction, reranking.
+- **Goal:** Solving ambiguity & minimizing hallucinations.
+
+</td>
+<td width="40%" valign="top">
+
+<br/>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&layout=compact&theme=radical&hide_border=true&card_width=320" alt="Top Languages" />
+</div>
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Current Focus
-
-### Maritime Traffic Risk Modeling
-*Architecting deep learning systems for proactive maritime safety and collision avoidance.*
-- **Core Tech:** ConvLSTM-Attention networks for spatio-temporal pattern recognition.
-- **Explainability (XAI):** Implementing Attention Maps to visualize risk factors and tuning operational thresholds (ROC/AUC) for real-world decision support.
-- **Engineering:** Building deterministic grid-based geospatial pipelines.
-
-### Advanced RAG Systems
-*Designing robust retrieval pipelines for ambiguous queries and noisy technical documents.*
-- **Architecture:** Hybrid Retrieval utilizing **VectorDB (ChromaDB)** for semantic search and **Knowledge Graph (Neo4j)** for structured context.
-- **Stack:** Local LLMs (Ollama), metadata extraction, and sophisticated reranking layers.
-- **Goal:** Solving query ambiguity, ensuring citation grounding, and minimizing hallucinations.
-
----
-
-## What I Bring
+## 💡 What I Bring
 
 | Competency | Description |
 | :--- | :--- |
-| **End-to-end AI Development** | From raw data ingestion to deployment — **I ship complete systems**, not just Jupyter notebooks. |
-| **Interpretation-First Design** | Every model I build comes with explainability tools: attention maps, error analysis, and operational thresholding. |
-| **Production Mindset** | Config-driven experiments, versioned datasets (DVC), CI-ready code structure, and fully reproducible results. |
-| **Geospatial Expertise** | Handling complex spatial data: Grid-based aggregation, spatial joins, and real-world operational constraints. |
+| 🏗️ **End-to-end AI** | From raw data ingestion to deployment — **I ship complete systems**, not just notebooks. |
+| 🔍 **Interpretation-First** | Every model comes with explainability tools: attention maps, error analysis, thresholds. |
+| ⚙️ **Production Mindset** | Config-driven experiments, versioned datasets (DVC), CI-ready code structure. |
+| 🌍 **Geospatial Expertise** | Grid-based aggregation, spatial joins, real-world operational constraints. |
 
 ---
 
-## Tech Stack
+## 🚀 Featured Projects
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <br/>
-  <img src="https://img.shields.io/badge/Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white" />
-  <img src="https://img.shields.io/badge/ChromaDB-111111?style=for-the-badge&logo=databricks&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-</div>
-
----
-
-## Featured Projects
-
-### [AIS_dataprocessing](git@github.com:chaeminyoon/AIS_dataprocessing.git)
+### 🚢 [MaritimeTrafficProject (AIS_dataprocessing)](https://github.com/chaeminyoon/AIS_dataprocessing)
 **Interpretable deep learning for maritime collision risk prediction**
-> A spatio-temporal risk modeling system designed for operational decision support, featuring attention-based explainability.
+> 📊 **Operational Metrics:** ROC/AUC evaluation optimized with real-world alarm thresholds.
+> 🧩 **XAI Visualization:** Attention maps to interpret *why* and *where* risk is high.
+> 🗺️ **Geospatial Pipeline:** Raw Shapefiles → Grid Indexing → Feature Aggregation.
 
-* **Operational Metrics:** ROC/AUC evaluation optimized with real-world alarm thresholds.
-* **XAI Visualization:** Attention maps to interpret *why* and *where* the model predicts high risk.
-* **Geospatial Pipeline:** Robust processing from Raw Shapefiles → Grid Indexing → Feature Aggregation.
-* **Reproducibility:** Fully config-driven experiments with deterministic data splits.
-
-### [Onpremise LLM: Local RAG Engine](git@github.com:chaeminyoon/python-onpremise-rag.git)
+### 📚 [Onpremise LLM: Local RAG Engine](https://github.com/chaeminyoon/python-onpremise-rag)
 **Production-grade PDF → VectorDB pipeline for enterprise RAG**
-> An end-to-end CLI tool for ingesting, cleaning, and indexing large-scale document collections into ChromaDB.
+> 🔄 **Resumable Pipeline:** Fault-tolerant stages (Ingest → Clean → Chunk → Embed → Index).
+> ⚡ **Optimization:** Batch processing tuned for large-scale enterprise collections.
+> 📉 **Evaluation:** Built-in framework to assess retrieval quality.
 
-* **Resumable Pipeline:** Fault-tolerant stages (Ingest → Clean → Chunk → Embed → Index).
-* **Incremental Updates:** Smart handling of new/modified files using dataset manifests.
-* **Optimization:** Batch processing tuned for large-scale enterprise collections.
-* **Evaluation:** Built-in framework to assess retrieval quality and chunking strategies.
-
-### [Search System: GraphRAG Engine](git@github.com:chaeminyoon/python-news-knowledge-graph.git)
+### 🔗 [Search System: GraphRAG Engine](https://github.com/chaeminyoon/python-news-knowledge-graph)
 **Graph-augmented retrieval for ambiguous technical queries**
-> A Hybrid RAG system combining semantic vector search with knowledge graph traversal to handle complex domains.
-
-* **Graph Schema:** Detailed modeling of `Document ↔ Chunk ↔ Entity ↔ Topic ↔ Citation` in Neo4j.
-* **Context Expansion:** Solves query ambiguity by traversing the graph to find related entities.
-* **Trustworthy AI:** Implements Reranking and strict citation grounding to reduce hallucinations.
-* **Domain Focus:** Optimized for policy, regulation, and complex technical documentation.
+> 🕸️ **Graph Schema:** `Document ↔ Chunk ↔ Entity ↔ Topic` modeling in Neo4j.
+> 🔍 **Context Expansion:** Solves query ambiguity by traversing the graph.
+> 🛡️ **Trustworthy AI:** Reranking and strict citation grounding.
 
 ---
----
 
-### Stats
+## 📐 Production-Ready Structure
+*I ensure reproducibility and scalability through this structure:*
 
-<div align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&layout=compact&theme=radical&card_width=400" alt="Top Languages" />
-
-</div>
-
+```bash
+project/
+├── README.md          # Context: Problem → Method → Results
+├── configs/           # Control: Experiment parameters (YAML/Hydra)
+├── src/               # Logic: Modular, tested, decoupled core code
+├── tests/             # Quality: Unit tests for critical functions
+└── reports/           # Insight: Auto-generated plots & metrics
