@@ -41,12 +41,6 @@ I specialize in applying Deep Learning and Large Language Models to solve comple
 ### 📈 Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=chaeminyoon&show_icons=true&theme=radical" alt="chaeminyoon's stats" height="150"/>
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chaeminyoon&layout=compact&theme=radical" alt="Top Languages" height="150"/>
 </div>
 
----
-
-<p align="center">
-  Generated with ❤️ by Antigravity
-</p>
