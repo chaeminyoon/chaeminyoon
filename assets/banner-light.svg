@@ -1,0 +1,11 @@
+<svg width="1000" height="252" viewBox="0 0 1000 252" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chaemin Yoon — AI Engineer">
+  <rect width="1000" height="252" fill="#ffffff"/>
+  <g font-family="'Courier New', Courier, monospace" font-size="12" fill="#8c8c8c" letter-spacing="1.5">
+    <text x="2" y="30">CHAEMIN YOON — SELECTED WORK</text>
+    <text x="998" y="30" text-anchor="end">SEOUL, KR — UTC+9</text>
+  </g>
+  <line x1="0" y1="48" x2="1000" y2="48" stroke="#d8d8d8" stroke-width="1"/>
+  <text x="-2" y="148" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#141414" letter-spacing="-1">Chaemin Yoon</text>
+  <text x="2" y="196" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#5a5a5a" letter-spacing="4.5">AI ENGINEER — SYSTEMS THAT CHECK THEIR OWN WORK</text>
+  <line x1="0" y1="230" x2="1000" y2="230" stroke="#d8d8d8" stroke-width="1"/>
+</svg>

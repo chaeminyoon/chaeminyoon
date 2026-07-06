@@ -1,107 +1,71 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img alt="Chaemin Yoon — AI Engineer. Systems that check their own work." src="assets/banner-light.svg" width="100%">
+</picture>
 
-# Hi there, I'm Chaemin Yoon 👋
+I build AI systems that are accountable for their own output — document parsers that evaluate and repair their own failures, risk models that show their reasoning, and retrieval pipelines instrumented for measurement before they are tuned for demos.
 
-### **AI Researcher & Engineer**
-*Maritime Safety AI & Production RAG Systems*
+Right now that means a document-AI platform: LLM parsing workflows with full-trace observability (Langfuse), experiment tracking (MLflow), and quality gates that decide whether an output ships, gets repaired, or gets rolled back — automatically.
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=3776AB&center=true&vCenter=true&width=800&lines=I+turn+research+prototypes+into+production+systems.;Explainable+Deep+Learning+for+Maritime+Safety;Hybrid+RAG+Architecture+(Vector+%2B+Graph)" alt="Typing SVG" /></a>
-<br/>
+<br>
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white" />
-<img src="https://img.shields.io/badge/ChromaDB-111111?style=flat-square&logo=databricks&logoColor=white" />
-<img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+## Selected work
 
-</div>
+### 01 · Self-healing document parsing
 
-<br/>
+**[Parse-Everything](https://github.com/chaeminyoon/Parse-Everything)** — Most parsing pipelines fail silently: garbage goes in a database and nobody notices until a user does. This workflow treats every parse as a hypothesis. Outputs are scored against quality gates, failing sections are repaired with targeted re-prompts, and any repair that makes things worse is rolled back to the last good state.
 
-<table>
-<tr>
-<td width="60%" valign="top" style="padding: 20px 20px 20px 0;">
+<sub>Python · LLM orchestration · MLflow · Langfuse · MinIO · FastAPI</sub>
 
+### 02 · Operating a forecasting model like a service
 
-## 🔭 Current Focus
+**[AIS-Traffic-Ops](https://github.com/chaeminyoon/AIS-Traffic-Ops)** — The MLOps half of a maritime traffic forecasting system: the model is wrapped in evaluation, serving, and monitoring workflows so that retraining and deployment are routine operations rather than events. Training a model is the easy part; this repository is about everything after.
 
-### 🌊 Maritime Traffic Risk Modeling
-> *Architecting deep learning systems for proactive maritime safety.*
-- **Core Tech:** ConvLSTM-Attention for spatio-temporal patterns.
-- **XAI:** Attention Maps & ROC/AUC tuning for decision support.
-- **Engineering:** Deterministic grid-based geospatial pipelines.
+<sub>Python · MLflow · FastAPI · Docker · monitoring</sub>
 
-### 🧠 Advanced RAG Systems
-> *Robust retrieval for ambiguous queries & noisy docs.*
-- **Architecture:** Hybrid (VectorDB + Neo4j Knowledge Graph).
-- **Stack:** Local LLMs (Ollama), metadata extraction, reranking.
-- **Goal:** Solving ambiguity & minimizing hallucinations.
-<br/>
+### 03 · Interpretable maritime risk forecasting
 
-</td>
-<td width="40%" valign="top" style="padding-left: 20px;">
+**[AIS-Traffic-Model](https://github.com/chaeminyoon/AIS-Traffic-Model)** — Short-term traffic forecasting from AIS grid sequences, with the model lineage documented as it evolved. ConvLSTM with attention over spatio-temporal grids; attention maps show *where* the model is looking, and alarm thresholds are tuned on ROC/AUC against real operational false-alarm budgets — because a safety model nobody trusts is a model nobody uses.
 
+<sub>PyTorch · ConvLSTM + attention · XAI · geospatial pipelines</sub>
 
+### 04 · Retrieval for questions vector search can't answer
 
-## 🧩 Languages
+**[python-news-knowledge-graph](https://github.com/chaeminyoon/python-news-knowledge-graph)** — Vector search retrieves what is *similar*; ambiguous questions need what is *related*. This engine builds a `Document ↔ Chunk ↔ Entity ↔ Topic` knowledge graph in Neo4j and traverses it to expand context, with reranking and strict citation grounding so every answer can be traced to a source.
 
-<div align="center">
-<br/>
+<sub>Neo4j · vector + graph hybrid retrieval · reranking · citation grounding</sub>
 
-![Top Languages](https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=chaeminyoon&layout=compact&theme=radical&hide_border=true&card_width=375)
-![GitHub Streak](https://streak-stats.demolab.com/?user=chaeminyoon&theme=radical&hide_border=true)
-</div>
+### 05 · RAG that runs where the data can't leave
 
+**[python-onpremise-rag](https://github.com/chaeminyoon/python-onpremise-rag)** — An enterprise RAG engine for air-gapped environments, built on LangGraph and local LLMs. The ingestion pipeline (ingest → clean → chunk → embed → index) is staged and resumable, because on a hundred-thousand-page collection, "restart from scratch" is not an error-handling strategy.
 
-</td>
-</tr>
-</table>
+<sub>LangGraph · Ollama · ChromaDB · fault-tolerant batch pipelines</sub>
 
----
+<br>
 
-## 💡 What I Bring
+## How I work
 
-| Competency | Description |
-| :--- | :--- |
-| **End-to-end AI** | From raw data ingestion to deployment — **I ship complete systems**, not just notebooks. |
-| **Interpretation-First** | Every model comes with explainability tools: attention maps, error analysis, thresholds. |
-| **Production Mindset** | Config-driven experiments, versioned datasets (DVC), CI-ready code structure. |
-| **Geospatial Expertise** | Grid-based aggregation, spatial joins, real-world operational constraints. |
+**Evaluation is the product.** A model without a measurement harness is a demo. Every system above ships with its own evaluation loop — quality gates, retrieval metrics, or operational thresholds — before it ships features.
+
+**Explainability is an interface, not a report.** Attention maps, repair logs, and citations exist so that the person operating the system can decide when to trust it and when to override it.
+
+**Reproducibility is table stakes.** Config-driven experiments, versioned data, and pipelines that resume instead of restart. If a result can't be reproduced, it didn't happen.
+
+<br>
+
+## Stack
+
+| | |
+|:--|:--|
+| **Languages** | Python · SQL · TypeScript |
+| **Modelling** | PyTorch · TensorFlow · scikit-learn |
+| **LLM systems** | LangGraph · Ollama · Neo4j · ChromaDB · Langfuse |
+| **Operations** | FastAPI · Docker · MLflow · DVC · MinIO |
+
+<br>
 
 ---
 
-## 🚀 Featured Projects
+<sub>Seoul, KR (UTC+9) — open to AI engineering roles in Canada · <a href="mailto:cmyoon@geosr.com">cmyoon@geosr.com</a></sub>
 
-### 🚢 [MaritimeTrafficProject (AIS_dataprocessing)](https://github.com/chaeminyoon/AIS_dataprocessing)
-**Interpretable deep learning for maritime collision risk prediction**
-> **Operational Metrics:** ROC/AUC evaluation optimized with real-world alarm thresholds.<br/>
-> **XAI Visualization:** Attention maps to interpret *why* and *where* risk is high.<br/>
-> **Geospatial Pipeline:** Raw Shapefiles → Grid Indexing → Feature Aggregation.
-
-### 📚 [Onpremise LLM: Local RAG Engine](https://github.com/chaeminyoon/python-onpremise-rag)
-**Production-grade PDF → VectorDB pipeline for enterprise RAG**
-> **Resumable Pipeline:** Fault-tolerant stages (Ingest → Clean → Chunk → Embed → Index).<br/>
-> **Optimization:** Batch processing tuned for large-scale enterprise collections.<br/>
-> **Evaluation:** Built-in framework to assess retrieval quality.
-
-### 🔗 [Search System: GraphRAG Engine](https://github.com/chaeminyoon/python-news-knowledge-graph)
-**Graph-augmented retrieval for ambiguous technical queries**
-> **Graph Schema:** `Document ↔ Chunk ↔ Entity ↔ Topic` modeling in Neo4j.<br/>
-> **Context Expansion:** Solves query ambiguity by traversing the graph.<br/>
-> **Trustworthy AI:** Reranking and strict citation grounding.
-
----
-
-## 📐 Production-Ready Structure
-*I ensure reproducibility and scalability through this structure:*
-
-```bash
-project/
-├── README.md          # Context: Problem → Method → Results
-├── configs/           # Control: Experiment parameters (YAML/Hydra)
-├── src/               # Logic: Modular, tested, decoupled core code
-├── tests/             # Quality: Unit tests for critical functions
-└── reports/           # Insight: Auto-generated plots & metrics
+<sub>No badges, no stat widgets. The repositories above are the résumé.</sub>
