@@ -3,9 +3,9 @@
   <img alt="Chaemin Yoon — AI Engineer. Systems that check their own work." src="assets/banner-light.svg" width="100%">
 </picture>
 
-I build AI systems that are accountable for their own output — document parsers that evaluate and repair their own failures, risk models that show their reasoning, and retrieval pipelines instrumented for measurement before they are tuned for demos.
+I build AI systems that are accountable for their own output — document parsers that evaluate and repair their own failures, forecasting models measured on what production actually cares about, and retrieval pipelines instrumented for measurement before they are tuned for demos.
 
-Right now that means a document-AI platform: LLM parsing workflows with full-trace observability (Langfuse), experiment tracking (MLflow), and quality gates that decide whether an output ships, gets repaired, or gets rolled back — automatically.
+Three years in, I'm driving my company's AI transformation — which means owning document AI, spatio-temporal forecasting, and retrieval as one connected stack rather than three separate problems. The repositories below are that stack built end to end, from raw data to serving and monitoring, each with its own evaluation loop.
 
 <br>
 
@@ -13,21 +13,21 @@ Right now that means a document-AI platform: LLM parsing workflows with full-tra
 
 ### 01 · Self-healing document parsing
 
-**[Parse-Everything](https://github.com/chaeminyoon/Parse-Everything)** — Most parsing pipelines fail silently: garbage goes in a database and nobody notices until a user does. This workflow treats every parse as a hypothesis. Outputs are scored against quality gates, failing sections are repaired with targeted re-prompts, and any repair that makes things worse is rolled back to the last good state.
+**[Parse-Everything](https://github.com/chaeminyoon/Parse-Everything)** — Most parsing pipelines fail silently: garbage goes in a database and nobody notices until a user does. This workflow treats every parse as a hypothesis: outputs are scored against a quality gate, repairs are routed by cost (free heuristics → LLM text repair → vision table reconstruction), and any repair that lowers the score is rolled back. On real Korean environmental-assessment PDFs it recovers a document with half its body text missing from **0.41 to 0.93** on the quality score, and averages **0.73 in a five-engine head-to-head** where the best baseline reaches 0.67.
 
-<sub>Python · LLM orchestration · MLflow · Langfuse · MinIO · FastAPI</sub>
+<sub>Python · LangGraph · PyMuPDF · Surya OCR · vision LLM repair · LangSmith · CI</sub>
 
 ### 02 · Operating a forecasting model like a service
 
-**[AIS-Traffic-Ops](https://github.com/chaeminyoon/AIS-Traffic-Ops)** — The MLOps half of a maritime traffic forecasting system: the model is wrapped in evaluation, serving, and monitoring workflows so that retraining and deployment are routine operations rather than events. Training a model is the easy part; this repository is about everything after.
+**[AIS-Traffic-Ops](https://github.com/chaeminyoon/AIS-Traffic-Ops)** — The operations half of a maritime traffic forecasting system: **sixteen model versions** tracked in a registry, promotion via a `production` symlink, hot-reload deployment with zero server restarts, and FastAPI serving monitored through Prometheus and Grafana. Cross-version ranking uses actual-grid metrics rather than training loss — the loss function changed between experiments, so loss can't rank them. Training a model is the easy part; this repository is everything after.
 
-<sub>Python · MLflow · FastAPI · Docker · monitoring</sub>
+<sub>Python · FastAPI · MLflow · Prometheus · Grafana · Docker</sub>
 
 ### 03 · Interpretable maritime risk forecasting
 
-**[AIS-Traffic-Model](https://github.com/chaeminyoon/AIS-Traffic-Model)** — Short-term traffic forecasting from AIS grid sequences, with the model lineage documented as it evolved. ConvLSTM with attention over spatio-temporal grids; attention maps show *where* the model is looking, and alarm thresholds are tuned on ROC/AUC against real operational false-alarm budgets — because a safety model nobody trusts is a model nobody uses.
+**[AIS-Traffic-Model](https://github.com/chaeminyoon/AIS-Traffic-Model)** — Short-term traffic forecasting on a 66×66 AIS grid: twelve 5-minute frames in, the next traffic map out. Sixteen documented versions trace the path from a ConvLSTM baseline to a gated spatial U-Net that holds production at **336K parameters** — occupancy F1 **3.3× (0.17 → 0.55)**, SSIM **+40%**, R² **0.05 → 0.50** over the baseline. All of it measured on actual traffic grids after inverse transform, because a model can reduce loss while still putting ships in the wrong cells.
 
-<sub>PyTorch · ConvLSTM + attention · XAI · geospatial pipelines</sub>
+<sub>TensorFlow · ConvLSTM → gated spatial U-Net · actual-grid evaluation · model registry</sub>
 
 ### 04 · Retrieval for questions vector search can't answer
 
