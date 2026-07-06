@@ -66,6 +66,6 @@ Right now that means a document-AI platform: LLM parsing workflows with full-tra
 
 ---
 
-<sub>Seoul, KR (UTC+9) — open to AI engineering roles in Canada · <a href="mailto:cmyoon@geosr.com">cmyoon@geosr.com</a></sub>
+<sub>Seoul, KR (UTC+9) — open to AI engineering roles in Canada · <a href="mailto:dbscoals789@gmail.com">dbscoals789@gmail.com</a></sub>
 
 <sub>No badges, no stat widgets. The repositories above are the résumé.</sub>
