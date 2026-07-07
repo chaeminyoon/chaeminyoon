@@ -41,6 +41,14 @@ Three years in, I'm driving my company's AI transformation — which means ownin
 
 <sub>LangGraph · Ollama · ChromaDB · fault-tolerant batch pipelines</sub>
 
+### 06 · Vehicle trajectory anomaly detection from road CCTV
+
+**[Vehicle-Anomaly-Algorithm](https://github.com/chaeminyoon/Vehicle-Anomaly-Algorithm)** — Detecting wrong-way driving, lane-crossing, and sudden stops from CCTV vehicle tracks. Ten documented experiments evolve the baseline (LSTM autoencoder reconstruction error, **F1 0.25**) into a lane-relative rule-scoring pipeline at **F1 0.81** — the decisive moves were a 2D direction field learned from normal traffic and a `cross_flow` feature that counts lanes crossed immune to road curvature. Along the way: three rejected perspective-rectification attempts and one retracted claim, caught by enlarging the evaluation set — a benchmark with six samples per cell cannot tell improvement from noise.
+
+<sub>YOLOv8 tracking · lane-relative features · 2D direction field · synthetic anomaly benchmark · LSTM autoencoder</sub>
+
+> **🎓 Master's thesis** — *A Study on Improving the Accuracy of Vehicle Anomalous Trajectory Identification Using an LSTM Autoencoder* (석사학위논문)
+
 <br>
 
 ## How I work
