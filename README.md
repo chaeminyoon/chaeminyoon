@@ -41,7 +41,13 @@ Three years in, I'm driving my company's AI transformation — which means ownin
 
 <sub>LangGraph · Ollama · ChromaDB · fault-tolerant batch pipelines</sub>
 
-### 06 · Vehicle trajectory anomaly detection from road CCTV
+### 06 · A document-to-vector pipeline that ships to air-gapped servers
+
+**[odt-vector-pipeline](https://github.com/chaeminyoon/odt-vector-pipeline)** — The ingestion side of document retrieval, built for **~14 years of Korean government permit records** and a deployment target with no internet and no pip. ODT parsing keeps tables whole through chunking, BGE-M3 embeddings land in PostgreSQL/pgvector, and search switches itself from vector to hybrid when a company name appears in the query. Nine permit fields are extracted by rules with a confidence score, guarded by **~60 adversarial test cases** against false positives; ingestion is incremental by SHA-256, so re-runs touch only what changed. Results mirror into a partner's plain PostgreSQL — and the sync is *tested* to never create or drop the one table it doesn't own. The README demos every stage with captures from real runs, down to the rows and vectors that land in each table.
+
+<sub>Python · lxml · BGE-M3 · PostgreSQL + pgvector · SQLAlchemy · Docker (air-gapped bundle) · rule-based field extraction</sub>
+
+### 07 · Vehicle trajectory anomaly detection from road CCTV
 
 **[Vehicle-Anomaly-Algorithm](https://github.com/chaeminyoon/Vehicle-Anomaly-Algorithm)** — Detecting wrong-way driving, lane-crossing, and sudden stops from CCTV vehicle tracks. Ten documented experiments evolve the baseline (LSTM autoencoder reconstruction error, **F1 0.25**) into a lane-relative rule-scoring pipeline fused with the autoencoder it replaced, at **F1 0.85** — the decisive moves were a 2D direction field learned from normal traffic, a `cross_flow` feature that counts lanes crossed immune to road curvature, and a hybrid score that lets the AE recover the oscillatory anomalies rules miss. Along the way: three rejected perspective-rectification attempts and one retracted claim, caught by enlarging the evaluation set — a benchmark with six samples per cell cannot tell improvement from noise.
 
