@@ -31,19 +31,19 @@ Three years in, I'm driving my company's AI transformation — which means ownin
 
 ### 04 · Retrieval for questions vector search can't answer
 
-**[python-news-knowledge-graph](https://github.com/chaeminyoon/python-news-knowledge-graph)** — Vector search retrieves what is *similar*; ambiguous questions need what is *related*. This engine builds a `Document ↔ Chunk ↔ Entity ↔ Topic` knowledge graph in Neo4j and traverses it to expand context, with reranking and strict citation grounding so every answer can be traced to a source.
+**[Maritime-GraphRAG](https://github.com/chaeminyoon/Maritime-GraphRAG)** — Vector search retrieves what is *similar*; multi-hop questions need what is *related*. This engine builds a two-layer Neo4j graph (documents + typed maritime entities) and routes each question to the retriever that can answer it. A ground-truth benchmark shows why: vector search collapses on 2-hop questions (strict accuracy **0.91 → 0.38**), while direct graph querying reaches **0.85 overall vs 0.70 for vector** — and because no single retriever dominates, an agentic router picks the strategy per question. The same graph mines cross-document causal chains from **139 real KMST casualty adjudications**.
 
-<sub>Neo4j · vector + graph hybrid retrieval · reranking · citation grounding</sub>
+<sub>Neo4j · FastAPI · React · Text2Cypher · agentic retriever routing · ground-truth multi-hop benchmark</sub>
 
-### 05 · RAG that runs where the data can't leave
+### 05 · Fixing RAG where it actually breaks: the data
 
-**[python-onpremise-rag](https://github.com/chaeminyoon/python-onpremise-rag)** — An enterprise RAG engine for air-gapped environments, built on LangGraph and local LLMs. The ingestion pipeline (ingest → clean → chunk → embed → index) is staged and resumable, because on a hundred-thousand-page collection, "restart from scratch" is not an error-handling strategy.
+**[RAG-Audit-Pipeline](https://github.com/chaeminyoon/RAG-Audit-Pipeline)** — Degraded retrieval is usually blamed on the model; more often the culprit is duplicates, near-answer distractors, and cleaning that deletes the answers themselves. This tool turns each into a measurable problem: two-stage deduplication (MinHash/LSH → embedding verification) at **0.90 precision / 1.00 recall**, per-query attribution of which documents push answers out of the top-k, and automatic failure classification grounded in the CAIN'24 / SIGIR'24 failure taxonomies. Every repair is verified by an 8-cell before/after ablation with bootstrap confidence intervals — local-first, no API keys, 76 tests.
 
-<sub>LangGraph · Ollama · ChromaDB · fault-tolerant batch pipelines</sub>
+<sub>Python · MinHash/LSH · BM25 + dense hybrid (RRF) · reranking · bootstrap ablation benchmark · pytest</sub>
 
 ### 06 · A document-to-vector pipeline that ships to air-gapped servers
 
-**[Doc-Vectorize-Pipeline](https://github.com/chaeminyoon/odt-vector-pipeline)** — The ingestion side of document retrieval, built for **~14 years of Korean government permit records** and a deployment target with no internet and no pip. ODT parsing keeps tables whole through chunking, BGE-M3 embeddings land in PostgreSQL/pgvector, and search switches itself from vector to hybrid when a company name appears in the query. Nine permit fields are extracted by rules with a confidence score, guarded by **~60 adversarial test cases** against false positives; ingestion is incremental by SHA-256, so re-runs touch only what changed. Results mirror into a partner's plain PostgreSQL — and the sync is *tested* to never create or drop the one table it doesn't own. The README demos every stage with captures from real runs, down to the rows and vectors that land in each table.
+**[Doc-Vectorize-Pipeline](https://github.com/chaeminyoon/Doc-Vectorize-Pipeline)** — The ingestion side of document retrieval, built for **~14 years of Korean government permit records** and a deployment target with no internet and no pip. ODT parsing keeps tables whole through chunking, BGE-M3 embeddings land in PostgreSQL/pgvector, and search switches itself from vector to hybrid when a company name appears in the query. Nine permit fields are extracted by rules with a confidence score, guarded by **~60 adversarial test cases** against false positives; ingestion is incremental by SHA-256, so re-runs touch only what changed. Results mirror into a partner's plain PostgreSQL — and the sync is *tested* to never create or drop the one table it doesn't own. The README demos every stage with captures from real runs, down to the rows and vectors that land in each table.
 
 <sub>Python · lxml · BGE-M3 · PostgreSQL + pgvector · SQLAlchemy · Docker (air-gapped bundle) · rule-based field extraction</sub>
 
