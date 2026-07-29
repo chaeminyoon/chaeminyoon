@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <a href="README.md">English</a> | <a href="README.ko.md">한국어</a>
 </p>
 
@@ -41,7 +41,7 @@ ConvLSTM 베이스라인에 시점을 고르는 attention과 항로 형태를 �
 
 **[Maritime-GraphRAG](https://github.com/chaeminyoon/Maritime-GraphRAG)** · "부산항에 컨테이너선을 기항시키는 선사는?"은 조인이라 벡터 검색으로 풀리지 않습니다.
 Neo4j에 문서·엔티티 이중 그래프를 쌓고 정답 있는 합성 데이터로 재보니 벡터 0.70, Text2Cypher **0.85**였습니다.
-그런데 Text2Cypher는 3홉에서 0점이었습니다. 질문에 따라 검색방법별 정확도가 계속 달랐고, 그래서 라우터가 가장 잘 답할 수 있는 검색방법을 선택하게 만들었습니다.
+그런데 Text2Cypher는 3홉에서 0점이었습니다. 질문에 따라 검색 방법별 정확도가 계속 달랐고, 그래서 라우터가 가장 잘 답할 수 있는 검색 방법을 선택하게 만들었습니다.
 
 **[RAG-Audit-Pipeline](https://github.com/chaeminyoon/RAG-Audit-Pipeline)** · 검색 품질이 떨어지는 원인은 대개 모델이 아니라 데이터입니다.
 중복 문서는 MinHash/LSH로 후보 쌍을 좁힌 뒤 그 후보만 임베딩 코사인으로 확인해, 모델별로 보정한 임계값을 넘는 쌍만 제거합니다.
