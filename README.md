@@ -3,8 +3,8 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="Chaemin Yoon, AI Engineer" src="assets/banner-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
+  <img alt="Chaemin Yoon, AI Engineer" src="assets/banner-light.svg?v=2" width="100%">
 </picture>
 
 **AI Engineer in Seoul, preparing to relocate to Canada**  

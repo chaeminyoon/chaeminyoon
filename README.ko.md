@@ -3,8 +3,8 @@
 </p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="윤채민, AI 엔지니어" src="assets/banner-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
+  <img alt="윤채민, AI 엔지니어" src="assets/banner-light.svg?v=2" width="100%">
 </picture>
 
 **서울 기반 AI 엔지니어 · 캐나다 이주 준비 중**  
