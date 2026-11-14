@@ -7,8 +7,7 @@
   <img alt="Cheamin Yoon, AI Engineer" src="assets/banner-light.svg?v=2" width="100%">
 </picture>
 
-**AI Engineer in Seoul, preparing to relocate to Canada**  
-Approved for a Canadian IEC working holiday permit. No sponsorship or LMIA required, and my start date is flexible.  
+**AI Engineer in Canada**  
 [LinkedIn](https://www.linkedin.com/in/chaemin-yoon-0a35782b7/) · [dbscoals789@gmail.com](mailto:dbscoals789@gmail.com)
 
 I look at the structure of the problem and the data before picking a model. Documents have hierarchy, traffic has geometry, accident records have causation.
